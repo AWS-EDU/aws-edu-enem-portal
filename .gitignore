@@ -1,0 +1,34 @@
+# System generated files
+.DS_Store
+Thumbs.db
+
+# Log files and dirs
+logs/**
+*.log
+*.out
+
+# Build dirs
+**/build
+**/dist
+
+# Environment variables file
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+
+# NodeJS and React
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+build/Release
+.yarn-integrity
+.node_repl_history
+node_modules/
+jspm_packages/
+.eslintcache
+typings/
+dist/
+*.tgz
+.npm
