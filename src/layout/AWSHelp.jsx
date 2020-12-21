@@ -6,17 +6,16 @@ import Heading from 'aws-northstar/components/Heading';
 
 const AWSHelp = (
     <HelpPanel
-        header="Help Section"
+        header="Ajuda"
         learnMoreFooter={[
-            <Link href="/docs">Link to internal documentation</Link>,
-            <Link href="https://www.yoursite.com">Link to external documentation</Link>,
+            <Link href="https://github.com/aws-samples/aws-edu-exam-analytics">National Education Exam - Analytics Lab</Link>,
+            <Link href="https://github.com/AWS-EDU/aws-edu-question-reader/tree/main">AWS EDU Question Reader</Link>,
         ]}
     >
+        <Heading variant="h4">Sobre</Heading>
         <Text variant="p">
-            This is a paragraph with some <b>bold text</b> and also some <i>italic text.</i>
+            <b>(Este site não é oficial AWS)</b> O objetivo deste portal é compartilhar estudos relacionados ao dados do <i>ENEM</i> com o intuito de compartilhar informação e possibilidades para o ensino Brasileiro, utilizando serviços de <i>Analytics</i> e <i>AI/ML</i> na AWS.
         </Text>
-        <Heading variant="h4">h4 section header</Heading>
-        <Heading variant="h5">h5 section header</Heading>
     </HelpPanel>
 );
 

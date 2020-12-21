@@ -10,9 +10,8 @@ import Box from 'aws-northstar/layouts/Box';
 import NorthStarThemeProvider from 'aws-northstar/components/NorthStarThemeProvider';
 import ThemeOverride from './layout/ThemeOverride';
 // Content pages rendered in the central panel
-import Page1 from './content/Page1';
-import Page2 from './content/Page2';
-import Page3 from './content/Page3';
+import Dashboard from './content/Dashboard';
+import Questions from './content/Questions';
 
 
 ReactDOM.render(
@@ -24,11 +23,10 @@ ReactDOM.render(
                 helpPanel={AWSHelp}>
                 <Box bgcolor="white" width="100%" height="1000px">
                     <Switch>
-                        <Route path="/" exact={true} component={Page1} />
-                        <Route path="/page1" exact={true} component={Page1} />
-                        <Route path="/page2" exact={true} component={Page2} />
-                        <Route path="/page3" exact={true} component={Page3} />
-                        <Route path="*" exact={true} component={Page1} />
+                        <Route path="/" exact={true} component={Dashboard} />
+                        <Route path="/dashboard" exact={true} component={Dashboard} />
+                        <Route path="/questions" exact={true} component={Questions} />
+                        <Route path="*" exact={true} component={Dashboard} />
                     </Switch>
                 </Box>
             </AppLayout>
