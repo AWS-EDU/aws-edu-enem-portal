@@ -17,7 +17,7 @@ function About() {
             <div className="text-wrapper">
                 <Heading variant="h4">O Portal</Heading>
                 <Text variant="p">
-                    Este portal <b>não é um site oficial AWS</b>. O objetivo deste portal é compartilhar estudos relacionados ao dados do ENEM com o intuito de compartilhar informação e possibilidades para o ensino Brasileiro, utilizando serviços de <i>Analytics</i> e <i>AI/ML</i> na AWS.
+                    Este portal <b>não é um site oficial AWS</b>. O objetivo deste portal é compartilhar estudos relacionados aos dados do ENEM com o intuito de demonstrar novas possibilidades para o ensino Brasileiro, utilizando serviços de <i>Analytics</i> e <i>AI/ML</i> na AWS.
                 </Text>
             </div>
             <div className="text-wrapper">
