@@ -1,5 +1,9 @@
 # AWS EDU ENEM Portal
 
+This is how the sample application looks like:
+
+![ENEM Portal appliaction](images/mockup.jpg)
+
 ## :wrench: Setup
 
 To start developing, you must have NodeJS preinstalled.
