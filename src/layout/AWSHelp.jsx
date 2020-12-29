@@ -14,7 +14,11 @@ const AWSHelp = (
     >
         <Heading variant="h4">Sobre</Heading>
         <Text variant="p">
-            <b>(Este site não é oficial AWS)</b> O objetivo deste portal é compartilhar estudos relacionados ao dados do <i>ENEM</i> com o intuito de compartilhar informação e possibilidades para o ensino Brasileiro, utilizando serviços de <i>Analytics</i> e <i>AI/ML</i> na AWS.
+            Este portal <b>não é um site oficial AWS</b>. O objetivo deste portal é compartilhar estudos relacionados ao dados do <i>ENEM</i> com o intuito de compartilhar informação e possibilidades para o ensino Brasileiro, utilizando serviços de <i>Analytics</i> e <i>AI/ML</i> na AWS.
+        </Text>
+
+        <Text variant="p">
+            Todo conteúdo demonstrado no portal é <b>open-source</b>. Veja abaixo como replicar.
         </Text>
     </HelpPanel>
 );

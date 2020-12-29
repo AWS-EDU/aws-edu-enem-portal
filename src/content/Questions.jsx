@@ -2,7 +2,8 @@ import Table from 'aws-northstar/components/Table';
 import StatusIndicator from 'aws-northstar/components/StatusIndicator';
 import Container from 'aws-northstar/layouts/Container';
 import FormGroup from 'aws-northstar/components/FormGroup';
-import Checkbox from 'aws-northstar/components/Checkbox';
+import { ButtonDropdown } from 'aws-northstar';
+
 
 const columnDefinitions = [
     {
@@ -18,22 +19,34 @@ const columnDefinitions = [
         accessor: 'year'
     },
     {
+        id: 'page',
+        width: 200,
+        Header: 'Página',
+        accessor: 'page'
+    },
+    {
         id: 'question_id',
         width: 200,
         Header: 'Número',
         accessor: 'question_id'
     },
     {
-        id: 'category',
+        id: 'area',
         width: 200,
-        Header: 'Categoria',
-        accessor: 'category'
+        Header: 'Área',
+        accessor: 'area'
     },
     {
         id: 'image',
         width: 200,
         Header: 'Imagem',
         accessor: 'image'
+    },
+    {
+        id: 'dashboard_filter',
+        width: 200,
+        Header: 'Dashboard',
+        accessor: 'dashboard_filter'
     },
     {
         id: 'status',
@@ -62,8 +75,10 @@ const data = [
         question_id: 23,
         book: 'Azul',
         year: 2019,
-        category: 'Matemática',
+        page: 10,
+        area: 'LC',
         image: 'Abrir',
+        dashboard_filter: 'Filtrar',
         status: 'active'
     },
 ];
@@ -73,11 +88,12 @@ function Questions() {
         <Container headingVariant='h1' title='Questões do ENEM'>
             <Container headingVariant='h4' title='Filtros'>
                 <FormGroup row>
-                    <Checkbox>Default checkbox</Checkbox>
-                    <Checkbox checked={true}>Checked</Checkbox>
-                    <Checkbox checked={false}>Unchecked</Checkbox>
-                    <Checkbox disabled={true}>Disabled</Checkbox>
-                    <Checkbox indeterminate={true}>Indeterminate</Checkbox>
+                    <ButtonDropdown></ButtonDropdown>
+                    <ButtonDropdown></ButtonDropdown>
+                    <ButtonDropdown></ButtonDropdown>
+                    <ButtonDropdown></ButtonDropdown>
+                    <ButtonDropdown></ButtonDropdown>
+                    <ButtonDropdown></ButtonDropdown>
                 </FormGroup>
             </Container>
             <Container headingVariant='h4' title='Resultados'>
@@ -93,8 +109,15 @@ function Questions() {
                     disableSortBy={true}
                 />
             </Container>
-        </Container>
+        </Container >
     );
 }
 
 export default Questions;
+
+// TODO: Adicionar filtro por área de conhecimento (Adicionar redação como área de conhecimento temporariamente)
+// TODO: Adicionar filtro por competência de área
+// TODO: Adicionar filtro por página
+// TODO: Adicionar filtro por questão
+// TODO: Adicionar filtro por cor
+// TODO: Adicionar filtro por ano

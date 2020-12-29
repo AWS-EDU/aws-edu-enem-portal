@@ -1,27 +1,35 @@
-import KeyValuePair from 'aws-northstar/components/KeyValuePair';
+import React from 'react';
 import Container from 'aws-northstar/layouts/Container';
-import ColumnLayout, { Column } from 'aws-northstar/layouts/ColumnLayout';
-import Link from 'aws-northstar/components/Link';
-import StatusIndicator from 'aws-northstar/components/StatusIndicator';
-import Stack from 'aws-northstar/layouts/Stack';
-import Toggle from 'aws-northstar/components/Toggle';
-import FormGroup from 'aws-northstar/components/FormGroup';
-import Checkbox from 'aws-northstar/components/Checkbox';
-import BreadcrumbGroup from 'aws-northstar/components/BreadcrumbGroup';
-import { MemoryRouter } from 'react-router';
-
-
-const ExternalLink = (
-    <Link href="https://www.amazon.com" target="_blank">
-        Value with external link
-    </Link>
-);
-
-const Status = <StatusIndicator statusType="positive">Available</StatusIndicator>;
+import api from '../services/api';
+import { embedDashboard } from 'amazon-quicksight-embedding-sdk';
 
 function Dashboard() {
+    const dashboardRef = React.createRef();
+    const embed = async () => {
+        let options = {}
+        await api.get('quicksight').then(
+            response => {
+                options = {
+                    url: response.data['EmbedUrl'],
+                    container: dashboardRef.current,
+                    scrolling: "no",
+                    height: "700px",
+                    width: "100%",
+                    locale: "pt-BR",
+                    footerPaddingEnabled: true
+                };
+            }
+        )
+        embedDashboard(options)
+    };
+
+    React.useEffect(() => {
+        embed();
+    });
+
     return (
-        <Container headingVariant='h1' title="QuickSight Dashboard">
+        <Container headingVariant='h1' title="Microdados do ENEM (Dashboard)">
+            <div ref={dashboardRef} />
         </Container>
     );
 }
