@@ -7,6 +7,7 @@ import Inline from 'aws-northstar/layouts/Inline';
 import Alert from 'aws-northstar/components/Alert';
 import Button from 'aws-northstar/components/Button';
 
+import api from '../services/api';
 import './styles/questions.css';
 
 function Questions() {
@@ -72,10 +73,10 @@ function Questions() {
             accessor: 'page'
         },
         {
-            id: 'question_id',
+            id: 'question',
             width: 200,
             Header: 'Número',
-            accessor: 'question_id'
+            accessor: 'question'
         },
         {
             id: 'area',
@@ -117,19 +118,31 @@ function Questions() {
         }
     ];
 
-    /* DATA EXAMPLE:
-        {
-            question_id: 23,
-            book: 'Azul',
-            year: 2019,
-            page: 10,
-            area: 'LC',
-            image: 'Abrir',
-            dashboard_filter: 'Filtrar',
-            status: 'active'
-        }
-    */
-    const data = [];
+    /* GET DATA */
+    const [data, setData] = React.useState();
+
+    React.useEffect(() => {
+        api.get('questions').then(
+            response => {
+                const dataEnem = []
+                response.data['items'].forEach((item, index) => {
+                    dataEnem.push(
+                        {
+                            question: item['question_num']['S'],
+                            book: 'Azul',
+                            year: 2019,
+                            page: item['page_number']['S'],
+                            area: item['exam_area']['S'],
+                            image: 'N/A',
+                            dashboard_filter: 'N/A',
+                            status: 'inactive'
+                        }
+                    )
+                });
+                setData(dataEnem)
+            }
+        )
+    }, []);
 
     return (
         <Container headingVariant='h1' title='Questões do ENEM'>
