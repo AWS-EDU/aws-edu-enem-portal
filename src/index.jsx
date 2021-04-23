@@ -20,7 +20,6 @@ ReactDOM.render(
             <AppLayout
                 header={AWSHeader}
                 navigation={AWSNavigation}
-            /*helpPanel={AWSHelp}*/
             >
                 <Box bgcolor="white" width="100%" height="1000px">
                     <Switch>
