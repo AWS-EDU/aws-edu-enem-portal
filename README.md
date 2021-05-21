@@ -29,7 +29,7 @@ __Notes: The QuickSight dashboard is not open to localhost, you will need to set
 
 1. `npm run build`.
 2. `aws s3 cp build/ s3://<your-bucket>/ --recursive`
-3. `aws cloudfront create-invalidation --distribution-id <your-distribution> --paths "*"`
+3. `aws cloudfront create-invalidation --distribution-id <your-distribution> --paths "/*"`
 
 ## :lock: Security
 
