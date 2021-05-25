@@ -2,7 +2,7 @@ import SideNavigation, { SideNavigationItemType } from 'aws-northstar/components
 
 
 const navigationItems = [
-    { type: SideNavigationItemType.LINK, text: 'Microdados do ENEM (Dashboard)', href: '/dashboard' },
+    { type: SideNavigationItemType.LINK, text: 'Microdados do ENEM (Dashboard)', href: '/enembi' },
     { type: SideNavigationItemType.LINK, text: 'Questões do ENEM', href: '/questions' },
     { type: SideNavigationItemType.LINK, text: 'Sobre', href: '/about' }
 ];

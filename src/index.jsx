@@ -9,7 +9,7 @@ import Box from 'aws-northstar/layouts/Box';
 import NorthStarThemeProvider from 'aws-northstar/components/NorthStarThemeProvider';
 import ThemeOverride from './layout/ThemeOverride';
 // Content pages rendered in the central panel
-import Dashboard from './content/Dashboard';
+import ENEMBI from './content/ENEMBI';
 import Questions from './content/Questions';
 import QuestionDetails from './content/QuestionDetails';
 import About from './content/About';
@@ -25,7 +25,7 @@ ReactDOM.render(
                 <Box bgcolor="white" width="100%" height="1000px">
                     <Switch>
                         <Route path="/" exact={true} component={About} />
-                        <Route path="/dashboard" exact={true} component={Dashboard} />
+                        <Route path="/enembi" exact={true} component={ENEMBI} />
                         <Route path="/questions" exact={true} component={Questions} />
                         <Route path="/questions/:id" exact={true} component={QuestionDetails} />
                         <Route path="/about" exact={true} component={About} />

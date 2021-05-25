@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "amazon-quicksight-embedding-sdk": "^1.0.12",
+        "amazon-quicksight-embedding-sdk": "^1.0.15",
         "aws-northstar": "*",
         "axios": "^0.21.1",
         "react": "^16.14.0",
